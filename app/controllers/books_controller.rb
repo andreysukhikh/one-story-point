@@ -1,4 +1,9 @@
 class BooksController < InheritedResources::Base
+  def new
+    @book = Book.new
+    @authors = Author.all
+    @genres = Genre.all
+  end
 
   private
 

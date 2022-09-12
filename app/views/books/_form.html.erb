@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= form.label :author_id %>
-    <%= form.select(:author_id, @authors.collect {|p| [ p.fullname ] }) %>
+    <%= form.select(:author_id, @authors.collect {|p| [ p.fullname, p.id ] }) %>
   </div>
 
   <div class="field">
     <%= form.label :genre_id %>
-    <%= form.select(:author_id, @genres.collect {|p| [ p.title ] }) %>
+    <%= form.select(:genre_id, @genres.collect {|p| [ p.title, p.id ] }) %>
   </div>
 
   <div class="actions">

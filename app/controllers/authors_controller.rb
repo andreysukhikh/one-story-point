@@ -1,8 +1,7 @@
 class AuthorsController < InheritedResources::Base
-  def new
-    @book = Book.new
-    @authors = Author.all
-    @genres = Genre.all
+  def show
+    @author = Author.find(params[:id])
+    @books = Book.where(author: @author)
   end
 
   private

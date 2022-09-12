@@ -1,4 +1,8 @@
 class BooksController < InheritedResources::Base
+  def index
+    @books = Book.includes(:author, :genre)
+  end
+
   def new
     @book = Book.new
     @authors = Author.all

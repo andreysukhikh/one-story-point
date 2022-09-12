@@ -18,6 +18,7 @@ gem 'webpacker', '~> 5.0'
 gem 'net-smtp', '~> 0.3.1', require: false
 gem 'net-imap', require: false
 gem 'net-pop', require: false
+gem 'ffaker'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

@@ -17,12 +17,12 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @book.author_id %>
+  <%= @book.author.fullname %>
 </p>
 
 <p>
   <strong>Genre:</strong>
-  <%= @book.genre_id %>
+  <%= @book.genre.title %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |

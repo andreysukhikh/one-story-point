@@ -9,6 +9,18 @@ class BooksController < InheritedResources::Base
     @genres = Genre.all
   end
 
+  def create
+    @book = Book.new(book_params)
+    @authors = Author.all
+    @genres = Genre.all
+
+    if @book.save
+      redirect_to @book
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   def edit
     @book = Book.find(params[:id])
     @authors = Author.all

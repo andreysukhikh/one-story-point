@@ -19,6 +19,7 @@ gem 'net-smtp', '~> 0.3.1', require: false
 gem 'net-imap', require: false
 gem 'net-pop', require: false
 gem 'ffaker'
+gem 'pry', '~> 0.13.1'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

@@ -5,10 +5,16 @@ class BooksController < InheritedResources::Base
     @genres = Genre.all
   end
 
+  def edit
+    @book = Book.find(params[:id])
+    @authors = Author.all
+    @genres = Genre.all
+  end
+
   private
 
   def book_params
-    params.require(:book).permit(:name, :description, :author_id, :genre_id)
+    params.require(:book).permit(:name, :description, :shelf, :author_id, :genre_id)
   end
 
 end

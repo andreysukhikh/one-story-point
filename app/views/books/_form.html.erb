@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :shelf %>
+    <%= form.number_field :shelf, value: 1 %>
+  </div>
+
+  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>

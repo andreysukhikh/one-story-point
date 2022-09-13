@@ -2563,3 +2563,80 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 2.7ms | Allocations: 6886)
 
 
+Started GET "/" for 127.0.0.1 at 2022-09-13 10:41:08 +0300
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (4.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["id", 5], ["id", 8], ["id", 10], ["id", 6], ["id", 4], ["id", 9], ["id", 3], ["id", 7]]
+  ↳ app/views/books/index.html.erb:18
+  [1m[36mGenre Load (1.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20)[0m  [["id", 17], ["id", 14], ["id", 15], ["id", 2], ["id", 5], ["id", 3], ["id", 18], ["id", 7], ["id", 11], ["id", 13], ["id", 1], ["id", 10], ["id", 8], ["id", 20], ["id", 6], ["id", 4], ["id", 16], ["id", 12], ["id", 9], ["id", 19]]
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 58.1ms | Allocations: 51416)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 284.2ms | Allocations: 142867)
+Completed 200 OK in 309ms (Views: 284.8ms | ActiveRecord: 16.5ms | Allocations: 147231)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 10:41:22 +0300
+Processing by HomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/homepage.html.erb within layouts/application
+  Rendered home/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 311)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 5585)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 7092)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 10:41:24 +0300
+Processing by HomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/homepage.html.erb within layouts/application
+  Rendered home/homepage.html.erb within layouts/application (Duration: 0.7ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5058)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 5508)
+
+
+Started GET "/books" for 127.0.0.1 at 2022-09-13 10:41:30 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["id", 5], ["id", 8], ["id", 10], ["id", 6], ["id", 4], ["id", 9], ["id", 3], ["id", 7]]
+  ↳ app/views/books/index.html.erb:18
+  [1m[36mGenre Load (0.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20)[0m  [["id", 17], ["id", 14], ["id", 15], ["id", 2], ["id", 5], ["id", 3], ["id", 18], ["id", 7], ["id", 11], ["id", 13], ["id", 1], ["id", 10], ["id", 8], ["id", 20], ["id", 6], ["id", 4], ["id", 16], ["id", 12], ["id", 9], ["id", 19]]
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 99.8ms | Allocations: 49306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 104.4ms | Allocations: 54484)
+Completed 200 OK in 106ms (Views: 94.5ms | ActiveRecord: 10.6ms | Allocations: 55529)
+
+
+Started GET "/authors" for 127.0.0.1 at 2022-09-13 10:41:32 +0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (2.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:12
+  Rendered authors/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2965)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 8184)
+Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 2.7ms | Allocations: 9763)
+
+
+Started GET "/authors" for 127.0.0.1 at 2022-09-13 10:41:41 +0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (2.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:12
+  Rendered authors/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2429)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 7496)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 2.6ms | Allocations: 8034)
+
+
